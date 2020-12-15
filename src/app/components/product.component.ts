@@ -15,7 +15,7 @@ import { Product } from '../product.model';
 
 @Component({
     selector: 'app-product',
-    templateUrl:'./product.component.html',
+    templateUrl: './product.component.html',
     styleUrls: ['./product.component.scss'],
 })
 export class ProductComponent implements OnInit, OnInit, DoCheck, OnDestroy {
@@ -30,16 +30,20 @@ export class ProductComponent implements OnInit, OnInit, DoCheck, OnDestroy {
     //     console.log('OnChanges ')
     //     console.log(changes)
     // }
+  // tslint:disable-next-line:typedef
     ngOnInit() {
         console.log(' 3 ngOnInit');
     }
 
+  // tslint:disable-next-line:typedef
     ngDoCheck() {
         console.log('ngDoCheck');
     }
+  // tslint:disable-next-line:typedef
     ngOnDestroy() {
         console.log('ngOnDestroy');
     }
+  // tslint:disable-next-line:typedef
     addCart() {
         console.log('add carrito');
         this.productClicked.emit(this.product.id);
