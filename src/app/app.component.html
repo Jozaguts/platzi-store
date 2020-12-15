@@ -10,12 +10,18 @@
     {{ name }} {{ i }} <button (click)="deleteItem(i)">Eliminar item</button>
   </li>
 </ul>
+<div *ngIf="title === 'matias'">Esta es Matías</div>
+<div *ngIf="title === 'isa'">Esta es Isa</div>
+<div *ngIf="title === 'sol'">Esta es Sol</div>
 
-
-
+<div [ngSwitch]="title">
+  <p *ngSwitchCase="'matias'">Este es Matías</p>
+  <p *ngSwitchCase="'isa'">Este es isa</p>
+  <p *ngSwitchCase="'sol'">Este es sol</p>
+  <p *ngSwitchDefault>No corresponde</p>
+</div>
 <div *ngFor="let product of products">
-  {{product.title}}
-  <img [src]="product.image" >
-  {{product.price}}
-
+  {{ product.title }}
+  <img [src]="product.image" />
+  {{ product.price }}
 </div>
