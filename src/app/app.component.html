@@ -1,3 +1,12 @@
 <input type="text" [(ngModel)]="title" /> {{ title }}
 
 <div *ngIf="title == 'Sagit'">El div ha sido mostrado</div>
+
+<button (click)="addItem()">Add Item</button>
+
+<ul>
+  <li *ngIf="items.length === 0">Lista Vacía</li>
+  <li *ngFor="let name of items; index as i">
+    {{ name }} {{ i }} <button (click)="deleteItem(i)">Eliminar item</button>
+  </li>
+</ul>
