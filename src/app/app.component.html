@@ -21,9 +21,10 @@
   <p *ngSwitchCase="'sol'">Este es sol</p>
   <p *ngSwitchDefault>No corresponde</p>
 </div>
-<div *ngFor="let product of products">
+<div class="product-grid">
   <app-product
-    (productClicked)="(clickProduct)"
+    *ngFor="let product of products"
+    (productClicked)="clickProduct($event)"
     [product]="product"
   ></app-product>
 </div>
