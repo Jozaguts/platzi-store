@@ -10,7 +10,6 @@
     {{ name }} {{ i }} <button (click)="deleteItem(i)">Eliminar item</button>
   </li>
 </ul>
-<app-product></app-product>
 
 <div *ngIf="title === 'matias'">Esta es Matías</div>
 <div *ngIf="title === 'isa'">Esta es Isa</div>
@@ -23,7 +22,8 @@
   <p *ngSwitchDefault>No corresponde</p>
 </div>
 <div *ngFor="let product of products">
-  {{ product.title }}
-  <img [src]="product.image" />
-  {{ product.price }}
+  <app-product
+    (productClicked)="(clickProduct)"
+    [product]="product"
+  ></app-product>
 </div>
