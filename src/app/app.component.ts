@@ -9,6 +9,7 @@ import { Product } from './product.model';
 export class AppComponent {
   title = 'platzi-store';
   items = ['Matias', 'Isa', 'Sol'];
+  power = 10;
 
   products: Product[] = [
     {

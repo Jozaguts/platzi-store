@@ -5,12 +5,14 @@ import { AppComponent } from './app.component';
 import { FormsModule } from '@angular/forms';
 import { ProductComponent } from './components/product.component';
 import { CartComponent } from './cart/cart.component';
+import { ExponencialPipe } from './exponencial.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
     ProductComponent,
-    CartComponent
+    CartComponent,
+    ExponencialPipe
   ],
   imports: [
     BrowserModule,

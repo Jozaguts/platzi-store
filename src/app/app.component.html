@@ -4,6 +4,9 @@
 
 <button (click)="addItem()">Add Item</button>
 
+<input type="text" [(ngModel)]="power" />
+{{ power | exponencial }}
+
 <ul>
   <li *ngIf="items.length === 0">Lista Vacía</li>
   <li *ngFor="let name of items; index as i">
