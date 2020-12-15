@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Product } from './product.model'
 
 @Component({
   selector: 'app-root',
@@ -7,7 +8,45 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'platzi-store';
-  items = ['Matias', 'Isa', 'Sol'] 
+  items = ['Matias', 'Isa', 'Sol'];
+
+  products: Product[] = [
+    {
+      id: '1',
+      image: 'assets/images/camiseta.png',
+      title: 'Camiseta',
+      price: 8000,
+      description: 'bla bla bla bla bla'
+    },
+    {
+      id: '1',
+      image: 'assets/images/camiseta.png',
+      title: 'Camiseta',
+      price: 8000,
+      description: 'bla bla bla bla bla'
+    },
+    {
+      id: '2',
+      image: 'assets/images/hoodie.png',
+      title: 'Hoodie',
+      price: 8000,
+      description: 'bla bla bla bla bla'
+    },
+    {
+      id: '3',
+      image: 'assets/images/mug.png',
+      title: 'Mug',
+      price: 8000,
+      description: 'bla bla bla bla bla'
+    },
+    {
+      id: '4',
+      image: 'assets/images/camiseta.png',
+      title: 'Camiseta',
+      price: 8000,
+      description: 'bla bla bla bla bla'
+    }
+  ];
   
   addItem() {
     this.items.push('Nuevo Item');
